@@ -142,7 +142,7 @@ def plot(sizes, norm_x=100, norm_y=100,
     dx = [rect['dx'] for rect in rects]
     dy = [rect['dy'] for rect in rects]
 
-    ax.bar(x, dy, width=dx, bottom=y, color=color,
+    bars = ax.bar(x, dy, width=dx, bottom=y, color=color,
        label=label, align='edge', **kwargs)
 
     if not value is None:
@@ -160,5 +160,5 @@ def plot(sizes, norm_x=100, norm_y=100,
 
     ax.set_xlim(0, norm_x)
     ax.set_ylim(0, norm_y)
-    return ax 
+    return ax, bars 
     
